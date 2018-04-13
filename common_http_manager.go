@@ -106,6 +106,7 @@ func (p *HTTPServerManager) HTTPRequest(requestParam map[string]string, httpConf
 	defer func() {
 		err = resp.Body.Close()
 		if err != nil {
+			logger.Error("HTTP response body close error:", err)
 			respBytes = nil
 		}
 	}()

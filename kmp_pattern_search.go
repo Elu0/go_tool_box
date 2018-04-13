@@ -21,7 +21,7 @@ func PatternMatchOfString(pattern string, target string) int {
 	return -1
 }
 
-// ComputeNextArray KMP算法中计算pattern字符串的overlay数组
+// ComputeNextArray KMP算法中计算pattern字符串的next数组
 func ComputeNextArray(pattern string) []int {
 	retNextArray := []int{}
 	for i := 0; i < len(pattern); i++ {
